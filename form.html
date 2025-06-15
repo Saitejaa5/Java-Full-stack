@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+</head>
+<body style="margin: 0; padding: 0; background-image: url('images/6.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; font-family: Arial, sans-serif; color: white;">
+
+  <!-- Container to push form to the left -->
+  <div style="display: flex; height: 100vh; align-items: center;">
+
+    <!-- Left-side form block -->
+    <div style="flex: 1; padding: 40px; background-color: rgba(171, 146, 173, 0.6); margin: 30px; border-radius: 10px; max-width: 500px;">
+
+      <h2 style="text-align: center; margin-bottom: 30px;">Registration Form</h2>
+
+      <form method="post" action="./" autocomplete="on">
+        <table style="width: 100%; color: white;">
+          <tr>
+            <td><label for="fname">First Name:</label></td>
+            <td><input type="text" id="fname" name="fname" style="width: 100%; background-color: transparent; color: white;" pattern="[A-Za-z ]{1,20}" placeholder="Enter your name" required></td>
+          </tr>
+          <tr>
+            <td><label for="lname">Last Name:</label></td>
+            <td><input type="text" id="lname" name="lname" style="width: 100%; background-color: transparent; color: white;" pattern="[A-Za-z ]{1,20}" placeholder="Enter your last name" required></td>
+          </tr>
+          <tr>
+            <td><label for="age">Age:</label></td>
+            <td><input type="number" id="age" name="age" style="width: 100%; background-color: transparent; color: white;" placeholder="Enter your age" required></td>
+          </tr>
+          <tr>
+            <td><label for="dob">Date of Birth:</label></td>
+            <td><input type="date" id="dob" name="dob" style="width: 100%; background-color: transparent; color: white;" required></td>
+          </tr>
+          <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" id="email" name="email" style="width: 100%; background-color: transparent; color: white;" placeholder="Enter your email" required></td>
+          </tr>
+          <tr>
+            <td><label for="phone">Phone Number:</label></td>
+            <td><input type="tel" id="phone" name="phone" style="width: 100%; background-color: transparent; color: white;" pattern="[0-9]{10}" placeholder="Enter phone number" required></td>
+          </tr>
+          <tr>
+            <td>Gender:</td>
+            <td>
+              <input type="radio" name="gender" value="Male" required> Male
+              <input type="radio" name="gender" value="Female"> Female
+              <input type="radio" name="gender" value="Other"> Other
+            </td>
+          </tr>
+          <tr>
+            <td><label for="address">Address:</label></td>
+            <td><textarea id="address" name="address" rows="3" style="width: 100%; background-color: transparent; color: white;" placeholder="Your address" required></textarea></td>
+          </tr>
+          <tr>
+            <td>Classification:</td>
+            <td>
+              <input type="checkbox" name="classification" value="B.Tech" required> B.Tech
+              <input type="checkbox" name="classification" value="Bcom"> Bcom
+              <input type="checkbox" name="classification" value="Bsc"> Bsc
+            </td>
+          </tr>
+          <tr>
+            <td>Preferred Location:</td>
+            <td>
+              <select name="location" required style="width: 100%; background-color: transparent; color: white;">
+                <option value="">Select</option>
+                <optgroup label="India">
+                  <option>Hyderabad</option>
+                  <option>Bangalore</option>
+                  <option>Delhi</option>
+                  <option>Chennai</option>
+                  <option>Kerala</option>
+                  <option>Mumbai</option>
+                  <option>Pune</option>
+                </optgroup>
+                <optgroup label="US">
+                  <option>Texas</option>
+                  <option>New Jersey</option>
+                  <option>Seattle</option>
+                </optgroup>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Pincode:</td>
+            <td><input type="number" name="pincode" placeholder="Area pincode" style="width: 100%; background-color: transparent; color: white;" required></td>
+          </tr>
+          <tr>
+            <td>Profile Photo:</td>
+            <td><input type="file" name="photo" style="width: 100%;" required></td>
+          </tr>
+          <tr>
+            <td><input type="submit" value="Submit"></td>
+            <td><input type="reset" value="Reset"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <!-- Right side (blank for background image only) -->
+    <div style="flex: 1;"></div>
+  </div>
+</body>
+</html>

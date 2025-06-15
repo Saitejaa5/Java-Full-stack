@@ -1,0 +1,163 @@
+Q) desgin principles or desgin rules
+    when ever we are developing real time applications we use to remeber few design standards are expected from idustry 
+    --lossely coupled 
+    --high cofficient
+    --flexible to accomadate future technologies
+
+    big 7 methods
+    get retrieveing,
+     put , 
+    post uploading ,
+     select ,
+      delete
+      options
+      trace
+      connect
+
+#features of html 5
+Here are the **top HTML5 features** that modernized web development:
+
+---
+
+## 🔹 1. **Semantic Elements**
+
+HTML5 introduced **semantic tags** that clearly describe the meaning of the content.
+
+| Tag         | Description                    |
+| ----------- | ------------------------------ |
+| `<header>`  | Defines header section         |
+| `<nav>`     | Defines navigation links       |
+| `<section>` | Defines a section of content   |
+| `<article>` | Defines an independent article |
+| `<footer>`  | Defines footer section         |
+| `<aside>`   | Defines side content           |
+| `<main>`    | Defines the main content       |
+
+---
+
+## 🔹 2. **Audio & Video Support**
+
+No need for external plugins (like Flash) to play media.
+
+```html
+<audio controls>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<video width="320" height="240" controls>
+  <source src="movie.mp4" type="video/mp4">
+</video>
+```
+
+---
+
+## 🔹 3. **New Input Types**
+
+HTML5 forms support **new input types** for better validation and UI:
+
+```html
+<input type="email">
+<input type="tel">
+<input type="url">
+<input type="date">
+<input type="range">
+<input type="number">
+<input type="color">
+```
+
+---
+
+## 🔹 4. **Form Enhancements**
+
+* `required`, `placeholder`, `pattern`, `min`, `max`, `step`, and `autofocus`
+* Example:
+
+```html
+<input type="text" required placeholder="Enter name" pattern="[A-Za-z ]+">
+```
+
+---
+
+## 🔹 5. **Canvas API**
+
+Used to draw 2D graphics like charts, games, animations:
+
+```html
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<script>
+  var ctx = document.getElementById("myCanvas").getContext("2d");
+  ctx.fillStyle = "blue";
+  ctx.fillRect(10, 10, 150, 75);
+</script>
+```
+
+---
+
+## 🔹 6. **SVG Support**
+
+Scalable Vector Graphics for high-quality graphics:
+
+```html
+<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="green"
+  stroke-width="4" fill="yellow" />
+</svg>
+```
+
+---
+
+## 🔹 7. **Geolocation API**
+
+Access user's location (with permission):
+
+```javascript
+navigator.geolocation.getCurrentPosition(function(position) {
+  console.log(position.coords.latitude, position.coords.longitude);
+});
+```
+
+---
+
+## 🔹 8. **Local Storage & Session Storage**
+
+Store data in the browser without cookies.
+
+```javascript
+localStorage.setItem("name", "Teja");
+let name = localStorage.getItem("name");
+```
+
+---
+
+## 🔹 9. **Web Workers**
+
+Run scripts in background threads without blocking the UI.
+
+---
+
+## 🔹 10. **Drag & Drop API**
+
+Enable drag-and-drop interactions:
+
+```html
+<div draggable="true">Drag me</div>
+```
+
+---
+
+## Summary Table
+
+| Feature               | Use Case                    |
+| --------------------- | --------------------------- |
+| Semantic Tags         | Clean, structured layout    |
+| `<audio>` / `<video>` | Media without plugins       |
+| New Input Types       | Built-in form validation    |
+| Canvas / SVG          | Graphics and drawing        |
+| Geolocation API       | User's physical location    |
+| Local/Session Storage | Store data in the browser   |
+| Web Workers           | Run tasks in the background |
+| Drag and Drop         | Interactive UI              |
+
+---
+
+If you want a **small project** that uses these HTML5 features, I can help you build one (like a profile form with canvas + geolocation + local storage). Want that?
