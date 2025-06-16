@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+</head>
+<body style="background-image: url('photo1.jpg')"; background-size: cover; background-repeat: no-repeat; background-position: center;>
+    <center>
+        <h2>Employee Registration Form</h2>
+        <form name="regForm" method="POST" action="./EmployeeRegistration.html">
+            <table align="right" border="3" cellpadding="5" cellspacing="5">
+                <tr>
+                    <td><label>First Name:</label></td>
+                    <td><input type="text" name="firstName " placeholder="Enterfirstname" pattern = ></td>
+                </tr>
+                <tr>
+                    <td><label>Last Name:</label></td>
+                    <td><input type="text" name="lastName"placeholder=Enterlastname></td>
+                </tr>
+                <tr>
+                    <td><label>Employee ID:</label></td>
+                    <td><input type="text" name="empId"placeholder=Enteremplyename required></td>
+                </tr>
+                <tr>
+                    <td><label>Password:</label></td>
+                    <td><input type="password" name="empPwd" required></td>
+                </tr>
+                <tr>
+                    <td><label>Date of Birth:</label></td>
+                    <td><input type="date" name="dob" required></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="gender" value="male">
+                        <label>Male</label><br>
+                        <input type="radio" name="gender" value="female">
+                        <label>Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Qualification:</td>
+                    <td>
+                        <input type="checkbox" name="qualification" value="B.Tech">
+                        <label>B.Tech</label><br>
+                        <input type="checkbox" name="qualification" value="M.Tech">
+                        <label>M.tech</label><br>
+                        <input type="checkbox" name="qualification" value="MCA">
+                        <label>MCA</label><br>
+                        <input type="checkbox" name="qualification" value="MCA">
+                        <label>MBBS</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Preferred Location:</label></td>
+                    <td>
+                        <select name="prefered location" size="4" style="width :200px;">
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Banglore">Banglore</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="patna">patna</option>
+                            <option value="eluru">eluru</option>
+                        </select>
+                </tr>
+                <tr>
+                    <td><label>Address:</label></td>
+                    <td><textarea name="address" rows="4" cols="50" required></textarea></td>
+                </tr>
+                <tr>
+                    <td><label>Pincode </label>
+                    <td><input type ="text" name= "pincode"></td>
+                </tr>
+                <tr>
+                    <td><label>Updated Profile</label></td>
+                    <td><input type ="file" name ="resume"></td>
+                </tr>
+                <tr>
+                    <td><label>Max Outboarding Days</label></td>
+                    <td><input type ="range" name="outboarding"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Register">
+                        <input type ="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>4 Vertical Boxes</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 280px;
+      height: 420px;
+      font-style: italic;
+      background-color: white;
+      padding: 20px;
+      border: 2px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+
+    .box h2 {
+      margin-top: 0;
+      color: #333;
+      font-size: 1.2em;
+    }
+
+    .box p {
+      text-align: justify;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="box">
+      <h2><a href="https://www.oracle.com" target="_blank">Oracle</a></h2>
+      <p>Oracle Corporation is a leading American multinational technology company best known for its database software and technology, cloud engineered systems, and enterprise software products. Founded in 1977 by Larry Ellison, Bob Miner, and Ed Oates, Oracle has grown to become one of the largest software companies in the world. Its flagship product, the Oracle Database, revolutionized data management with its relational model, offering high performance, scalability, and security.</p>
+    </div>
+
+    <div class="box">
+      <h2><a href="https://www.netsuite.com" target="_blank">NetSuite</a></h2>
+      <p>NetSuite, acquired by Oracle in 2016, is a leading cloud-based enterprise resource planning (ERP) platform designed for small to mid-sized businesses. It provides integrated business management solutions including accounting, CRM, inventory, e-commerce, and HR. NetSuite’s cloud-native architecture enables businesses to streamline operations, gain real-time insights, and scale efficiently without on-premise IT infrastructure.</p>
+    </div>
+
+    <div class="box">
+      <h2><a href="https://www.amazon.com" target="_blank">Amazon</a></h2>
+      <p>Amazon is a global e-commerce and technology giant, best known for revolutionizing online retail. Founded by Jeff Bezos in 1994, Amazon began as an online bookstore and quickly expanded into a vast marketplace selling everything from electronics to groceries. It is now the world’s largest online retailer and a major player in logistics and supply chain innovation.</p>
+    </div>
+
+    <div class="box">
+      <h2><a href="https://www.microsoft.com" target="_blank">Microsoft</a></h2>
+      <p>Microsoft Corporation is a multinational technology leader known for its software, cloud services, and hardware. Founded in 1975 by Bill Gates and Paul Allen, Microsoft introduced the Windows operating system and Microsoft Office Suite, which became staples in personal and enterprise computing. Over the years, it has expanded into cloud computing, gaming, and AI.</p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
