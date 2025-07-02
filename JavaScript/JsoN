@@ -1,0 +1,54 @@
+json or js object notation is a light weight text based open frameowrk designed for human readable 
+it has been extended from 
+
+
+json primarily used for transmit data betweeen server and web aplllications
+web services and apis use json services to transmit data
+also big companies uses
+
+SYntax ;
+{
+    
+}
+
+
+client browser {
+    [URL:
+       http://ipaddress:portnumber
+       //applicationNAme//WebResourceNamme
+] Request Format[ Header part -- protocol Name , acc , locale etc
+                                    ========
+                                    Body part (Query String)
+                                    ]
+                    ||
+                    ||
+                    ||
+                    ||
+                    ||
+                    || Request Format [ Header Part--protocol Name,
+                                                    accepted LockManager,
+                                                    locale etc
+                                                    ------------
+                                                Body PArt (Query String) ]
+        
+        [   Java Technology (request Object)
+            Servles , JSp , Spring MVC , Spring Boot web MVC 
+        ]server -
+            aplllications 
+
+
+
+
+
+                     
+
+}
+services
+java technology
+services 
+JSP
+
+
+
+
+Steps of ajax operations

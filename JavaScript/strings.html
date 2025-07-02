@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript String Example</title>
+</head>
+<body>
+
+<script>
+  let str1 = new String("Hello World!");  // Using constructor
+  let str2 = "JavaScript is fun!";   
+
+  document.write("<b>Original Strings:</b><br>");
+  document.write("str1 = " + str1 + "<br>");
+  document.write("str2 = " + str2 + "<br><br>");
+
+  document.write("<b>String Properties and Methods:</b><br>");
+  document.write("Length of str2: " + str2.length + "<br>");
+  document.write("Uppercase: " + str2.toUpperCase() + "<br>");
+  document.write("Lowercase: " + str2.toLowerCase() + "<br>");
+  document.write("Substring (0 to 10): " + str2.substring(0, 10) + "<br>");
+  document.write("Index of 'fun': " + str2.indexOf("fun") + "<br>");
+  document.write("Replace 'fun' with 'awesome': " + str2.replace("fun", "awesome") + "<br>");
+
+  let fruits = ["Apple", "Banana", "Mango"];
+  
+  document.write("<b>Original Array:</b><br>");
+  document.write(fruits.join(", ") + "<br><br>");
+
+  fruits.push("Orange");
+  document.write("<b>After push('Orange'):</b><br>");
+  document.write(fruits.join(", ") + "<br><br>");
+
+  let poppedFruit = fruits.pop();
+  document.write("<b>After pop():</b><br>");
+  document.write("Popped: " + poppedFruit + "<br>");
+  document.write("Now: " + fruits.join(", ") + "<br><br>");
+
+  fruits.unshift("Strawberry");
+  document.write("<b>After unshift('Strawberry'):</b><br>");
+  document.write(fruits.join(", ") + "<br><br>");
+
+  let shiftedFruit = fruits.shift();
+  document.write("<b>After shift():</b><br>");
+  document.write("Shifted: " + shiftedFruit + "<br>");
+  document.write("Now: " + fruits.join(", ") + "<br><br>");
+
+  document.write("<b>Final Array Items (using loop):</b><br>");
+  for (let i = 0; i < fruits.length; i++) {
+    document.write("Fruit " + (i+1) + ": " + fruits[i] + "<br>");
+  }
+
+
+
+  let currentDate = new Date();
+
+  document.write("<h2>JavaScript Date Class Example</h2>");
+
+  document.write("Current Date & Time: " + currentDate + "<br><br>");
+
+  document.write("Year: " + currentDate.getFullYear() + "<br>");
+  document.write("Month (0–11): " + currentDate.getMonth() + "<br>");
+  document.write("Date: " + currentDate.getDate() + "<br>");
+  document.write("Day of Week (0–6): " + currentDate.getDay() + "<br>");
+  document.write("Hours: " + currentDate.getHours() + "<br>");
+  document.write("Minutes: " + currentDate.getMinutes() + "<br>");
+  document.write("Seconds: " + currentDate.getSeconds() + "<br>");
+  document.write("Milliseconds since 1970: " + currentDate.getTime() + "<br><br>");
+  document.write("Formatted Date (toDateString): " + currentDate.toDateString() + "<br>");
+  document.write("Formatted Local (toLocaleString): " + currentDate.toLocaleString() + "<br>");
+
+
+
+  let now = new Date();
+  document.write("Today is: " + now.toDateString() + "<br>");
+  document.write("Current Time: " + now.toLocaleTimeString() + "<br>");
+  document.write("Year: " + now.getFullYear() + "<br>");
+  document.write("Month: " + (now.getMonth() + 1) + "<br>"); 
+  document.write("Date: " + now.getDate() + "<br>");
+  document.write("Day of Week: " + now.getDay() + "<br>");
+
+
+</script>
+
+</body>
+</html>

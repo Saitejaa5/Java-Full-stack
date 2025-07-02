@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented programming JavaScript</title>
+</head>
+<script>
+    
+    // var emp = {
+    //     empNo:39,
+    //     empName:"Saiteja",
+    //     empPwd:"Admin@123"
+    // };
+    // document.write("EmpNo:" + emp.empNo+"<br>");
+    // document.write("EmpName:" + emp.empName+"<br>");
+    // document.write("EmpPwd:" + emp.empPwd+"<br>");
+
+    // emp.empNo=6;emp.empName="varun" ; emp.emppwd = "varun@123";
+    
+    
+    // document.write("EmpNo:" + emp.empNo+"<br>");
+    // document.write("EmpName:" + emp.empName+"<br>");
+    // document.write("EmpPwd:" + emp.empPwd+"<br>");
+
+   
+
+
+
+    function addPrice(amount){
+        this.price = amount;
+    }
+    function book(title,author){
+        this.title = title;
+        this.author = author;
+        this.addPrice = addPrice;
+    }
+
+
+</script>
+<body>
+    <script>
+         var myBook = new book("perl" , "Mohtashim");
+         myBook.addPrice(200);
+         document.write("Book title is : " + myBook.title + "<br>");
+         document.write("Book author is : " + myBook.author + "<br>");
+         document.write("Book price is : " + myBook.price + "<br>");
+
+    </script>
+    
+</body>
+</html>

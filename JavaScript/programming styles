@@ -1,0 +1,30 @@
+programming paradigm is a way or style of programming 
+
+
+classified into 2 types:
+
+--Imperatioive prog paradigm 
+    consists of sequence of sttaemnet that chnages the prog state until the target result is achieved
+
+--the order of execution of 
+
+--the main focus on how to achieve the goal .
+    it consists of three main
+    1) procedural approches
+    2) object oriented prog
+    3) parallel processing aproach 
+
+
+--Declarative programming paradigm
+    in which we dine  what needs to be accomplished without defining how it has to be implemented 
+    1) LOGIC 
+    2) FUNCTIONAL
+    3) DATABASE
+
+
+
+what is martialling an dunmartialing 
+
+how we can conver json obj java obj
+java obj to json string
+ 

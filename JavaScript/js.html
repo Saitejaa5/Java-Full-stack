@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Validation Example</title>
+  <script>
+      function validateForm() {
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let pass = document.getElementById("pass").value.trim();
+
+
+        if(name.length == 0 || name == ""){
+            st +="user name\n"
+        }
+       if (name === "" || email === "" || pass === "") {
+          alert("All fields are required!");
+          return false;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          alert("Please enter a valid email address.");
+          return false; 
+        }
+
+        alert("Form submitted successfully!\n\nName: " + name + "\nEmail: " + email);
+        return true;
+        alert("form has not submitted please enter the details to oroceed ")
+      }
+    </script>
+</head>
+<body>
+
+  <center>
+    <h2>JavaScript Form Validation</h2>
+
+    <form onsubmit="return validateForm()">
+      <table>
+        <tr>
+          <td><label for="name">User Name:</label></td>
+          <td><input type="text" id="name" name="un" required></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email:</label></td>
+          <td><input type="email" id="email" name="email" required></td>
+        </tr>
+        <tr>
+          <td><label for="pass">Password:</label></td>
+          <td><input type="password" id="pass" name="pass" required></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="submit" value="Submit">
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    
+  </center>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Object-Oriented Programming</title>
+    <script>
+        function addPrice(amount) {
+            this.price = amount;
+        }
+        function book(title, author) {
+            this.title = title;
+            this.author = author;
+            this.addPrice=addPrice;
+        }
+    </script>
+    </head>
+    <body>
+        <h1>Object-Oriented Programming Example</h1>
+        <script type="text/javascript">
+            var book1 = new book("JavaScript Basics", "John Doe");
+            book1.addPrice(29.99);
+            document.write("Book Title: " + book1.title + "<br>");
+            document.write("Book Author: " + book1.author + "<br>");
+            document.write("Book Price: $" + book1.price + "<br>");
+
+            var book2 = new book("Advanced JavaScript", "Jane Smith");
+            book2.addPrice(39.99);
+            document.write("<br>Book Title: " + book2.title + "<br>");
+            document.write("Book Author: " + book2.author + "<br>");
+            document.write("Book Price: $" + book2.price + "<br>");
+        </script>
+    </body>
+</html>

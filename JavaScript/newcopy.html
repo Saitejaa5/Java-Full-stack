@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trainee Course Selection</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    h1 { text-align: center; }
+    form {
+      max-width: 400px; margin: 0 auto;
+      padding: 24px 32px; background: #fff;
+      border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    label { margin: 12px 0 4px 0; display: block; font-weight: 500; }
+    input[type="text"], input[type="password"] {
+      width: 100%; padding: 8px; border: 1px solid #ccc;
+      border-radius: 4px; margin-bottom: 10px;
+    }
+    .checkbox-group { margin-bottom: 16px; }
+    .checkbox-group label { display: inline-block; margin-right: 16px; font-weight: 400; }
+    .checkbox-group input[type="checkbox"] { margin-right: 6px; }
+    button[type="submit"] {
+      padding: 8px 20px; background: #007bff; color: #fff;
+      border: none; border-radius: 4px; cursor: pointer;
+      font-size: 16px;
+    }
+    button[type="submit"]:hover { background: #0056b3; }
+    .output {
+      max-width: 400px; margin: 24px auto 0 auto;
+      padding: 16px; border: 1px solid #ccc;
+      background: #f9f9f9; border-radius: 8px;
+    }
+    @media (max-width: 500px) {
+      form, .output { max-width: 98vw; padding: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Trainee Course Selection</h1>
+
+  <form id="traineeForm">
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" required>
+
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+
+    <label>Available Course(s):</label>
+    <div class="checkbox-group">
+      <input type="checkbox" name="course" value="Java" id="java"> <label for="java">Java</label>
+      <input type="checkbox" name="course" value="Python" id="python"> <label for="python">Python</label><br>
+      <input type="checkbox" name="course" value="Web Development" id="webdev"> <label for="webdev">Web Development</label>
+      <input type="checkbox" name="course" value="Data Science" id="datasci"> <label for="datasci">Data Science</label>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="output" id="output"></div>
+
+  <script>
+    class Trainee {
+      constructor(firstName, lastName, password, courses, courseCost) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+        this.courses = courses;
+        this.courseCost = courseCost;
+      }
+
+      getName() {
+        return this.firstName + ' ' + this.lastName;
+      }
+
+      updatePassword(newPassword) {
+        this.password = newPassword;
+      }
+
+      getCourseCost() {
+        return this.courseCost;
+      }
+
+      getTraineeDetails() {
+        return `
+          <strong>Name:</strong> ${this.getName()}<br>
+          <strong>Selected Course(s):</strong> ${this.courses.join(', ')}<br>
+          <strong>Total Course Cost:</strong> Rs.${this.courseCost}<br>
+          <strong>Password:</strong> ${this.password}
+        `;
+      }
+    }
+
+    const courses = {
+      "Java": 5000,
+      "Python": 4500,
+      "Web Development": 6000,
+      "Data Science": 7000
+    };
+
+    let traineeObj = null;
+
+    document.getElementById('traineeForm')
+    .onsubmit = function(e) {
+      e.preventDefault();
+      const firstName = document.getElementById('fname').value;
+      const lastName = document.getElementById('lname').value;
+      const password = document.getElementById('password').value;
+      const checkedCourses = Array
+        .from(document.querySelectorAll('input[name="course"]:checked'))
+        .map(cb => cb.value);
+      let totalCost = checkedCourses.reduce((sum, c) => sum + courses[c], 0);
+      traineeObj = new Trainee(firstName, lastName, password, checkedCourses, totalCost);
+      document.getElementById('output').innerHTML =
+        traineeObj.getTraineeDetails() +
+        `<br><button onclick='updatePwdPrompt()'>Update Password</button>`;
+    };
+
+    function updatePwdPrompt() {
+      const newPwd = prompt("Enter new password:");
+      if (newPwd && traineeObj) {
+        traineeObj.updatePassword(newPwd);
+        document.getElementById('output').innerHTML =
+          traineeObj.getTraineeDetails() +
+          `<br><button onclick='updatePwdPrompt()'>Update Password</button>`;
+      }
+    }
+  </script>
+</body>
+</html>

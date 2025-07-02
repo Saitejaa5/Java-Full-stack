@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <hgcenter>
+    <form id="empForm">
+        <table>
+        <tr>
+        <td><label for="empName">Employee Name</label></td>
+        <td><input type="text" id="empName" placeholder="Enter name" required /></td>
+        </tr>
+        <tr>
+        <td><label for="empEmail">Employee Email</label></td>
+            <td><input type="email" id="empEmail" placeholder="Enter email" required /></td>
+            </tr>
+    <tr>
+        <td><label for="empPassword">Employee Password</label></td>
+                <td><input type="password" id="empPassword" placeholder="Enter password" required /></td>
+            </tr>
+            <tr>
+                 <td colspan="10" align="center">
+            <button type="submit">Add Employee</button>
+        </td>
+            </tr>
+  </form>
+
+  <div class="output" id="empDetails"></div>
+   <div id="jsonOutput" style="margin-top: 20px; color: blue;"></div>
+
+   <script>
+    class Employee {
+      constructor(name, email, password) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+      }
+       getDetails() {
+        return `
+          <strong>Name:</strong> ${this.name}<br>
+          <strong>Email:</strong> ${this.email}<br>
+          <strong>Password:</strong> ${this.password}<br>
+        `;
+       }
+       updatePassword(newPassword){
+        this.password = newPassword;
+       }
+    }
+
+    let employee = null;
+    document.getElementById('empForm').onsubmit = function(e){
+        e.preventDefault();
+        const name = document.getElementById("empName").value;
+        const email = document.getElementById("empEmail").value;
+        const password = document.getElementById("empPassword").value;
+
+      employee = new Employee(name, email, password);
+      showEmployee();
+      e.target.reset();
+    };
+    function showEmployee() {
+      if (!employee) return;
+      document.getElementById("empDetails").innerHTML =
+        employee.getDetails() +
+        `<div class="actions">
+          <button onclick="updatePassword()">Update Password</button>
+          <button onclick="deleteEmployee()">Delete Employee</button>
+        </div>`;
+
+        // document.getElementById("empDetails").innerHTML =
+        // employee.getDetails() +
+        // `<br><button onclick="updatePassword()">Update Password</button>
+        //  <button onclick="deleteEmployee()">Delete Employee</button>`;
+
+
+        const jsonData = JSON.stringify(employee, null, 2); 
+      document.getElementById("jsonOutput").innerHTML = 
+        `<strong>JSON Format:</strong><pre>${jsonData}</pre>`;
+    }
+    
+    function updatePassword() {
+      const newPass = prompt("Enter new password:");
+      if (newPass && employee) {
+        employee.updatePassword(newPass);
+        showEmployee();
+      }
+    }
+        function deleteEmployee() {
+      if (confirm("Are you sure you want to delete this employee?")) {
+        employee = null;
+        document.getElementById("empDetails").innerHTML = "Employee deleted";
+      }
+    }
+</script>
+    </center>
+</body>
+</html>

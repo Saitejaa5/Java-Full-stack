@@ -1,0 +1,58 @@
+key features of js
+1) interpreted language 
+2) high level and dynamic
+3) prototype based 
+4) singke threaded 
+5) client side and server side
+6) functional programming features
+7) asyncronous communication 
+8) Event driven 
+9) dom manipulations
+10) browser object model access
+11) large standard library and community ecosystem 
+
+
+
+
+
+basics for a programmiing 
+
+1) programming model and languafe selection 
+2) transalotor 
+3) datatypes 
+4) storage areas 
+5) tokens 
+6) There ARE SIX TYpes of tokens 
+    1) keywords 
+    2) identifiers 
+    3) constants
+    4) Strings 
+    5) operators 
+    6) special symbols 
+
+
+7) programming constructs?decession making stmts 
+8) basic structure of a proograminng language 
+
+
+JS Script variables
+
+Variables are used to store tha data values
+we can declare a varaibles using the var , let , const keywrods
+
+
+
+
+Operators
+
+Arithimetic
+
+comparision
+
+logical
+    
+bitwise
+assignemnet 
+conditional
+relational 
+ternery  
