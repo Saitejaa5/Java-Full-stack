@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hi this is Formula one website">
+    <meta name="author" content="Saiteja">
+    <meta name="keywords" content="html,webdevelopment">
+    <title>F1 City Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- <body style="background-image: url('images/1.jpg'); background-size: cover; background-repeat: no-repeat;"> -->
+
+    <header>
+    <h1>F1 City Gallery</h1>
+    <div class="social-icons">
+      <a href="https://instagram.com/yourusername" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+      <a href="https://github.com/yourusername" target="_blank"><img src="icons/github.png" alt="GitHub"></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://yourportfolio.com" target="_blank"><img src="icons/portfolio.png" alt="Portfolio"></a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#singapore">Singapore</a>
+    <a href="#monaco">Monaco</a>
+    <a href="#monza">Monza</a>
+    <a href="#melbourne">Melbourne</a>
+  </nav>
+
+  <div class="container">
+    <section>
+      <h2>Welcome to F1 City Gallery</h2>
+      <p>
+        Explore legendary Formula 1 races from different cities. Witness iconic moments, stunning images, and thrilling histories of each Grand Prix location!
+      </p>
+      <p>
+        Formula 1 (F1) is the highest class of international single-seater auto racing, governed by the Fédération Internationale de l'Automobile (FIA). 
+        Known for its speed, technology, and prestige, F1 features a series of races called Grands Prix held on circuits and public roads worldwide.
+      </p>
+
+      <hr>
+
+      <h3 id="singapore">Singapore Grand Prix</h3>
+      <p>Night race through the Marina Bay. Known for stunning visuals and tight corners.</p>
+      <img src="images/singapore.jpg" alt="Singapore GP">
+
+      <h3 id="monaco">Monaco Grand Prix</h3>
+      <p>One of the most prestigious and historic races. Tight turns and luxury yachts.</p>
+      <img src="images/monaco.jpg" alt="Monaco GP">
+
+      <h3 id="monza">Monza Grand Prix</h3>
+      <p>Temple of Speed. Italian passion. Ferrari’s home turf.</p>
+      <img src="images/monza.jpg" alt="Monza GP">
+
+      <h3 id="melbourne">Melbourne Grand Prix</h3>
+      <p>Season opener at Albert Park. Great blend of cityscape and racetrack.</p>
+      <img src="images/melbourne.jpg" alt="Melbourne GP">
+    </section>
+
+    <aside>
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <input type="submit" value="Submit">
+      </form>
+    </aside>
+  </div>
+
+  <footer>
+    &copy; 2025 Saiteja - F1 City Gallery
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>F1 City Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>F1 City Gallery</h1>
+  </header>
+
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#monaco">Monaco</a></li>
+        <li><a href="#seattle">Seattle</a></li>
+        <li><a href="#texas">Texas</a></li>
+        <li><a href="#newjersey">New Jersey</a></li>
+      </ul>
+    </nav>
+
+    <form style="right: auto;"    method="post" action="./" autocomplete="on">
+        <table style="width: 100%; color: white;">
+          <tr>
+            <td><label for="fname">First Name:</label></td>
+            <td><input type="text" id="fname" name="fname" style="width: 100%; background-color: transparent; color: white;" pattern="[A-Za-z ]{1,20}" placeholder="Enter your name" required></td>
+          </tr>
+          <tr>
+            <td><label for="lname">Last Name:</label></td>
+            <td><input type="text" id="lname" name="lname" style="width: 100%; background-color: transparent; color: white;" pattern="[A-Za-z ]{1,20}" placeholder="Enter your last name" required></td>
+          </tr>
+          <tr>
+            <td><label for="age">Age:</label></td>
+            <td><input type="number" id="age" name="age" style="width: 100%; background-color: transparent; color: white;" placeholder="Enter your age" required></td>
+          </tr>
+          <tr>
+            <td><label for="dob">Date of Birth:</label></td>
+            <td><input type="date" id="dob" name="dob" style="width: 100%; background-color: transparent; color: white;" required></td>
+          </tr>
+          <tr>
+            <td><label for="email">Email:</label></td>
+            <td><input type="email" id="email" name="email" style="width: 100%; background-color: transparent; color: white;" placeholder="Enter your email" required></td>
+          </tr>
+          <tr>
+            <td><label for="phone">Phone Number:</label></td>
+            <td><input type="tel" id="phone" name="phone" style="width: 100%; background-color: transparent; color: white;" pattern="[0-9]{10}" placeholder="Enter phone number" required></td>
+          </tr>
+          <tr>
+            <td>Gender:</td>
+            <td>
+              <input type="radio" name="gender" value="Male" required> Male
+              <input type="radio" name="gender" value="Female"> Female
+              <input type="radio" name="gender" value="Other"> Other
+            </td>
+          </tr>
+          <tr>
+            <td><label for="address">Address:</label></td>
+            <td><textarea id="address" name="address" rows="3" style="width: 100%; background-color: transparent; color: white;" placeholder="Your address" required></textarea></td>
+          </tr>
+          <tr>
+            <td>Classification:</td>
+            <td>
+              <input type="checkbox" name="classification" value="B.Tech" required> B.Tech
+              <input type="checkbox" name="classification" value="Bcom"> Bcom
+              <input type="checkbox" name="classification" value="Bsc"> Bsc
+            </td>
+          </tr>
+          <tr>
+            <td>Preferred Location:</td>
+            <td>
+              <select name="location" required style="width: 100%; background-color: transparent; color: white;">
+                <option value="">Select</option>
+                <optgroup label="India">
+                  <option>Hyderabad</option>
+                  <option>Bangalore</option>
+                  <option>Delhi</option>
+                  <option>Chennai</option>
+                  <option>Kerala</option>
+                  <option>Mumbai</option>
+                  <option>Pune</option>
+                </optgroup>
+                <optgroup label="US">
+                  <option>Texas</option>
+                  <option>New Jersey</option>
+                  <option>Seattle</option>
+                </optgroup>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Pincode:</td>
+            <td><input type="number" name="pincode" placeholder="Area pincode" style="width: 100%; background-color: transparent; color: white;" required></td>
+          </tr>
+          <tr>
+            <td>Profile Photo:</td>
+            <td><input type="file" name="photo" style="width: 100%;" required></td>
+          </tr>
+          <tr>
+            <td><input type="submit" value="Submit"></td>
+            <td><input type="reset" value="Reset"></td>
+          </tr>
+        </table>
+      </form>
+
+    <main>
+      <section id="monaco" class="city-info">
+        <article>
+          <h2>Monaco Grand Prix</h2>
+          <p>In 2018, Lewis Hamilton made F1 history by pulling off a triple overtake during Practice 1 and driving straight to the podium.</p>
+          <img src="images/monaco.jpg" alt="Monaco Pit Race">
+        </article>
+      </section>
+
+      <section id="seattle" class="city-info">
+        <article>
+          <h2>Seattle Grand Prix</h2>
+          <p>The Seattle street circuit was known for its wet conditions and narrow escapes. One of the most thrilling finishes in F1 history happened here in 2015.</p>
+          <img src="images/seattle.jpg" alt="Seattle Pit Race">
+        </article>
+      </section>
+
+      <section id="texas" class="city-info">
+        <article>
+          <h2>Texas Grand Prix</h2>
+          <p>Held at the Circuit of the Americas, the Texas GP is a favorite for high-speed straights and aggressive turns. Max Verstappen won it in style in 2022.</p>
+          <img src="images/texas.jpg" alt="Texas Pit Race">
+        </article>
+      </section>
+
+      <section id="newjersey" class="city-info">
+        <article>
+          <h2>New Jersey Grand Prix</h2>
+          <p>The New Jersey race offered skyline views and sharp curves. In 2020, Charles Leclerc showcased a dominating performance here.</p>
+          <img src="images/newjersey.jpg" alt="New Jersey Pit Race">
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Saiteja - F1 City Gallery</p>
+  </footer>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>F1 City Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>F1 City Gallery</h1>
+  </header>
+
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#monaco">Monaco</a></li>
+        <li><a href="#seattle">Seattle</a></li>
+        <li><a href="#texas">Texas</a></li>
+        <li><a href="#newjersey">New Jersey</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      
+      <section id="default-info">
+        <article>
+          <h2>Welcome to the F1 City Gallery</h2>
+          <p>Formula 1 (F1) is the highest class of international racing for single-seater formula racing cars. It is recognized by the FIA and features iconic circuits and legendary drivers. Explore famous race locations and legendary moments from Monaco to Texas.</p>
+          <img src="images/f1default.jpg" alt="F1 Racing Overview" width="100%">
+        </article>
+      </section>
+
+      City Sections -->
+      <!-- <section id="monaco" class="city-info">
+        <article>
+          <h2>Monaco Grand Prix</h2>
+          <p>In 2018, Lewis Hamilton made F1 history by pulling off a triple overtake during Practice 1 and driving straight to the podium.</p>
+          <img src="images/monaco.jpg" alt="Monaco Pit Race">
+        </article>
+      </section>
+
+      <section id="seattle" class="city-info">
+        <article>
+          <h2>Seattle Grand Prix</h2>
+          <p>The Seattle street circuit was known for its wet conditions and narrow escapes. One of the most thrilling finishes in F1 history happened here in 2015.</p>
+          <img src="images/seattle.jpg" alt="Seattle Pit Race">
+        </article>
+      </section>
+
+      <section id="texas" class="city-info">
+        <article>
+          <h2>Texas Grand Prix</h2>
+          <p>Held at the Circuit of the Americas, the Texas GP is a favorite for high-speed straights and aggressive turns. Max Verstappen won it in style in 2022.</p>
+          <img src="images/texas.jpg" alt="Texas Pit Race">
+        </article>
+      </section>
+
+      <section id="newjersey" class="city-info">
+        <article>
+          <h2>New Jersey Grand Prix</h2>
+          <p>The New Jersey race offered skyline views and sharp curves. In 2020, Charles Leclerc showcased a dominating performance here.</p>
+          <img src="images/newjersey.jpg" alt="New Jersey Pit Race">
+        </article>
+      </section>
+    </main>
+
+    <aside>
+      <form>
+        <label>First Name: <input type="text" placeholder="Enter your name" /></label><br>
+        <label>Last Name: <input type="text" placeholder="Enter your last name" /></label><br>
+        <label>Age: <input type="number" placeholder="Enter your age" /></label><br>
+        <label>Date of Birth: <input type="date" /></label><br>
+        <label>Email: <input type="email" placeholder="Enter your email" /></label><br>
+        <label>Phone Number: <input type="tel" placeholder="Enter phone number" /></label><br>
+        <label>Gender:
+          <input type="radio" name="gender" /> Male
+          <input type="radio" name="gender" /> Female
+          <input type="radio" name="gender" /> Other
+        </label><br>
+        <label>Address:<br>
+          <textarea placeholder="Your address"></textarea>
+        </label><br>
+        <label>Classification:
+          <input type="checkbox" /> B.Tech
+          <input type="checkbox" /> B.Com
+          <input type="checkbox" /> B.Sc
+        </label><br>
+        <label>Preferred Location:
+          <select>
+            <option>Select</option>
+            <option>Monaco</option>
+            <option>Seattle</option>
+            <option>Texas</option>
+            <option>New Jersey</option>
+          </select>
+        </label><br>
+        <label>Pincode: <input type="text" placeholder="Area pincode" /></label><br>
+        <label>Profile Photo: <input type="file" /></label><br>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+      </form>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Saiteja - F1 City Gallery</p>
+  </footer>
+
+</body>
+</html> --> 
