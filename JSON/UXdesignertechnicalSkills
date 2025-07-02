@@ -1,0 +1,19 @@
+Research - guides to make the best design decisions
+Information architecture - it helps you to orgainze and priortize large and complex Information.
+vire framing - building a skeletal framework for a website or mobile application enables you to 
+prototyping - is essential for testing functionalities adn identifying problem
+
+
+url(uniform resource locator) -
+
+syntx:
+
+protocol:
+
+there are 3 ideal properties should be consider by the protocal
+1- connectionless protocal
+2- stateness protocol
+    protocol should not remember previous request , it should comnsider every request as a new request
+3- compactable protocal
+    The prootocol should compactable enough to carry hyper text data between client and server
+
