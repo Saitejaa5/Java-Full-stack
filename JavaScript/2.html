@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ES6 Set with Employee Data</title>
+</head>
+<body>
+  <h2>ES6 Set Example with Employees</h2>
+  <script>
+    class Employee {
+      constructor(id, name) {
+        this.id = id;
+        this.name = name;
+      }
+
+      toString() {
+        return `ID: ${this.id}, Name: ${this.name}`;
+      }
+    }
+
+    const employeeSet = new Set();
+
+    const emp1 = new Employee(101, "Sai Teja");
+    const emp2 = new Employee(102, "Ravi Kumar");
+    const emp3 = new Employee(103, "Anjali Reddy");
+
+    employeeSet.add(emp1);
+    employeeSet.add(emp2);
+    employeeSet.add(emp3);
+ 
+    employeeSet.add(emp1);
+
+    document.write(`<strong>Total Employees:</strong> ${employeeSet.size}<br><br>`);
+
+    document.write("<strong>Employee List:</strong><br>");
+    for (let emp of employeeSet) {
+      document.write(`- ${emp.toString()}<br>`);
+    }
+
+    document.write("<br>");
+    document.write(`<strong>emp2 exists?</strong> ${employeeSet.has(emp2)}<br>`);
+
+    employeeSet.delete(emp2);
+    document.write(`<strong>Deleted emp2</strong><br>`);
+
+    document.write(`<strong>Total after deletion:</strong> ${employeeSet.size}<br>`);
+
+    const empArray = [...employeeSet];
+    console.log("Employee Array:", empArray);
+  </script>
+</body>
+</html>

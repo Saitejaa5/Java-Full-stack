@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trainee CRUD Using Map</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    input, select, button {
+      margin: 5px;
+      padding: 8px;
+    }
+    #output {
+      margin-top: 20px;
+      white-space: pre-wrap;
+      background-color: #f4f4f4;
+      padding: 10px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h2>Trainee CRUD Operations using Map</h2>
+
+  <input type="text" id="traineeId" placeholder="Trainee ID" />
+  <input type="text" id="traineeName" placeholder="Trainee Name" />
+  <input type="text" id="traineeCourse" placeholder="Course" />
+  <input type="number" id="traineeAge" placeholder="Age" />
+  <select id="traineeGender">
+    <option value="">Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <br>
+
+  <button onclick="createTrainee()">Create</button>
+  <button onclick="showTrainees()">Show</button>
+  <button onclick="updateTrainee()">Update</button>
+  <button onclick="deleteTrainee()">Delete</button>
+
+  <div id="output"></div>
+
+  <script>
+    const trainees = new Map();
+
+    function createTrainee() {
+      const id = document.getElementById("traineeId").value.trim();
+      const name = document.getElementById("traineeName").value.trim();
+      const course = document.getElementById("traineeCourse").value.trim();
+      const age = document.getElementById("traineeAge").value.trim();
+      const gender = document.getElementById("traineeGender").value;
+
+      if (!id || !name || !course || !age || !gender) {
+        alert("Please fill in all the fields.");
+        return;
+      }
+
+      if (trainees.has(id)) {
+        alert("Trainee ID already exists.");
+        return;
+      }
+
+      trainees.set(id, {
+        name,
+        course,
+        age: Number(age),
+        gender
+      });
+
+      alert("Trainee created successfully.");
+      clearInputs();
+    }
+
+    function showTrainees() {
+      let result = "Trainee List:\n";
+
+      if (trainees.size === 0) {
+        result += "No trainees found.";
+      } else {
+        for (const [id, info] of trainees.entries()) {
+          result += `ID: ${id}\nName: ${info.name}\nCourse: ${info.course}\nAge: ${info.age}\nGender: ${info.gender}\n\n`;
+        }
+      }
+
+      document.getElementById("output").innerText = result;
+    }
+
+    function updateTrainee() {
+      const id = document.getElementById("traineeId").value.trim();
+      const name = document.getElementById("traineeName").value.trim();
+      const course = document.getElementById("traineeCourse").value.trim();
+      const age = document.getElementById("traineeAge").value.trim();
+      const gender = document.getElementById("traineeGender").value;
+
+      if (!trainees.has(id)) {
+        alert("Trainee ID not found.");
+        return;
+      }
+
+      if (!name || !course || !age || !gender) {
+        alert("Please fill in all fields to update.");
+        return;
+      }
+
+      trainees.set(id, {
+        name,
+        course,
+        age: Number(age),
+        gender
+      });
+
+      alert("Trainee updated successfully.");
+      clearInputs();
+    }
+
+    function deleteTrainee() {
+      const id = document.getElementById("traineeId").value.trim();
+
+      if (!trainees.has(id)) {
+        alert("Trainee ID not found.");
+        return;
+      }
+
+      trainees.delete(id);
+      alert("Trainee deleted successfully.");
+      clearInputs();
+    }
+
+    function clearInputs() {
+      document.getElementById("traineeId").value = "";
+      document.getElementById("traineeName").value = "";
+      document.getElementById("traineeCourse").value = "";
+      document.getElementById("traineeAge").value = "";
+      document.getElementById("traineeGender").value = "";
+    }
+  </script>
+
+</body>
+</html>

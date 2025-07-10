@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Step 1: Define the Trainee class
+class Trainee {
+  constructor(id, name, course) {
+    this.id = id;
+    this.name = name;
+    this.course = course;
+  }
+}
+
+// Step 2: Get command-line arguments (skip first 2: node + filename)
+const args = process.argv.slice(2);
+
+// Step 3: Validate input
+if (args.length !== 5) {
+  console.log("❗ Please provide exactly 5 trainees in format: id,name,course");
+  console.log("➡ Example:");
+  console.log("node traineeMapCmd.js T1,Alice,Java T2,Bob,Python T3,Charlie,HTML T4,David,CSS T5,Eva,JS");
+  process.exit(1);
+}
+
+// Step 4: Create a Map to hold trainee data
+const traineeMap = new Map();
+
+// Step 5: Loop through arguments and fill Map
+for (let i = 0; i < 5; i++) {
+  const parts = args[i].split(",");
+
+  if (parts.length !== 3) {
+    console.log(`❌ Invalid format at argument ${i + 1}. Use id,name,course`);
+    process.exit(1);
+  }
+
+  const [id, name, course] = parts.map(p => p.trim());
+  const trainee = new Trainee(id, name, course);
+  traineeMap.set(id, trainee);
+}
+
+// Step 6: Convert Map values to array and display in table
+const traineeArray = Array.from(traineeMap.values());
+console.log("\n📋 Trainee Map (Table View):");
+console.table(traineeArray);
+
+// Step 7: Convert to JSON and print
+const jsonData = JSON.stringify(traineeArray, null, 2);
+console.log("\n📦 Trainee Data (JSON Format):");
+console.log(jsonData);
+
+  </script>
+  
+</body>
+</html>
